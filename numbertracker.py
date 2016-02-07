@@ -35,4 +35,6 @@ for x in panlist:
     picName = "Pic_" + str(x) + ".png"
     cv2.imwrite(picName, frame)
     cv2.waitKey(0)
-    video_capture.release()
+    time.sleep(2)
+
+video_capture.release()
