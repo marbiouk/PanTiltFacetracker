@@ -34,10 +34,5 @@ for x in panlist:
     pan(x)
     picName = "Pic_" + str(x) + ".png"
     cv2.imwrite(picName, frame)
-
-#cv2.imshow("Image", gray)
-cv2.waitKey(0)
-
-# When everything is done, release the capture
-video_capture.release()
-cv2.destroyAllWindows()
+    cv2.waitKey(0)
+    video_capture.release()
