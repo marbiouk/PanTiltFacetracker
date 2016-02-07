@@ -27,6 +27,6 @@ for x in panlist:
     image = rawCapture.array
     pan(x)
     picName = "Pic_" + str(x) + ".png"
-    cv2.imwrite(picName, IMAGE)
+    cv2.imwrite(picName, image)
     cv2.waitKey(0)
     time.sleep(2)
