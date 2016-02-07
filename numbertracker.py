@@ -7,7 +7,8 @@ from picamera import PiCamera
  
 # initialize the camera and grab a reference to the raw camera capture
 camera = PiCamera()
-rawCapture = PiRGBArray(camera)
+camera.resolution = (640, 480)
+rawCapture = PiRGBArray(camera,size=(640, 480))
  
 # allow the camera to warmup
 time.sleep(0.1)
@@ -23,10 +24,11 @@ panlist = [90, 70, 50]
 
 #Take image and pan 20 degrees
 for x in panlist:
-    camera.capture(rawCapture, format="rgb")
+    camera.capture(rawCapture, format="bgr")
     image = rawCapture.array
     pan(x)
     picName = "Pic_" + str(x) + ".png"
     cv2.imwrite(picName, image)
     cv2.waitKey(0)
+    rawCapture.truncate(0)
     time.sleep(2)
