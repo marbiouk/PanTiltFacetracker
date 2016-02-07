@@ -34,4 +34,3 @@ for x in panlist:
     time.sleep(2)
 
 rawCapture.close()
-break
