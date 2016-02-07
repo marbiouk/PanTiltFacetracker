@@ -24,7 +24,7 @@ panlist = [90, 70, 50]
 #Take image and pan 20 degrees
 for x in panlist:
     camera.capture(rawCapture, format="rgb")
-    image = rawCapture
+    image = rawCapture.array
     pan(x)
     picName = "Pic_" + str(x) + ".png"
     cv2.imwrite(picName, image)
