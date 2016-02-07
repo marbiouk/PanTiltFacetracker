@@ -32,7 +32,10 @@ ret, frame = video_capture.read()
 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 gray = cv2.equalizeHist( gray )
 
-cv2.imshow("Image", gray)
+picName = 'pic.png'
+cv2.imwrite(picName, gray)`
+
+#cv2.imshow("Image", gray)
 cv2.waitKey(0)
 
 # When everything is done, release the capture
