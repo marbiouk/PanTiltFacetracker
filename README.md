@@ -1,4 +1,4 @@
-Mini Pan-Tilt Face Tracker
+Forked from Mini Pan-Tilt Face Tracker to focus on numbers rather than faces, all hardware is the same, however the facetracker.py is amended to search for numbers and to digitse these.
 ==========================
 
 You will need:
