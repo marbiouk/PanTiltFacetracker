@@ -32,3 +32,5 @@ for x in panlist:
     cv2.waitKey(0)
     rawCapture.truncate(0)
     time.sleep(2)
+    
+break
